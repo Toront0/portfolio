@@ -5,8 +5,15 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true
   },
+
+  // 🟢 Fix: Disable optimization to bypass the broken /_next/image route
+  images: {
+    unoptimized: true
+  },
+
   cacheComponents: true,
   partialPrefetching: true,
+
   turbopack: {
     rules: {
       "*.css": {
