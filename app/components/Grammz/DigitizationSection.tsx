@@ -24,6 +24,14 @@ const DigitizationSection = () => {
               . Единый цифровой 3D-каталог решает эту проблему, обеспечивая
               общую логику материалов, ракурсов и подачи.
             </p>
+            <p className="mt-3 text-base">
+              Мой практический{" "}
+              <strong className="text-zinc-900 font-semibold dark:text-white">
+                опыт в 3D-моделировании
+              </strong>{" "}
+              позволил мне самостоятельно оцифровать и подготовить все
+              трехмерные ассеты под строгие веб-стандарты.
+            </p>
 
             <ul className="divide-y divide-zinc-200 mt-4 dark:divide-zinc-800/60">
               <li className="flex items-start gap-3 py-4">
