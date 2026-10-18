@@ -98,8 +98,8 @@ export default function VideoPlayer({ src, poster }: VideoPlayerProps) {
   };
 
   return (
-    <div className="relative group w-full max-w-4xl mx-auto overflow-hidden rounded-xl bg-black shadow-2xl aspect-video">
-      {/* Video Elements */}
+    <div className="relative group  w-full  mx-auto overflow-hidden rounded-xl bg-black shadow-2xl aspect-video">
+      {/* Video Element */}
       <video
         ref={videoRef}
         src={src}
@@ -111,8 +111,23 @@ export default function VideoPlayer({ src, poster }: VideoPlayerProps) {
         playsInline
       />
 
+      {/* ⚡ INITIAL PHASE BIG PLAY BUTTON OVERLAY */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center bg-black/20 pointer-events-none transition-all duration-300 ${
+          isPlaying ? "opacity-0 scale-95" : "opacity-100 scale-100"
+        }`}
+      >
+        <button
+          onClick={togglePlay}
+          className="pointer-events-auto flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 text-white text-3xl sm:text-4xl shadow-2xl transition-all duration-300 hover:bg-white/20 hover:scale-110 active:scale-95 group-hover:border-white/50"
+          aria-label="Play video"
+        >
+          <HiPlay className="translate-x-[2px]" />
+        </button>
+      </div>
+
       {/* Control Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 pt-12 transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex flex-col gap-3">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 pt-12 transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex flex-col gap-3 z-10">
         {/* Progress Bar Slider */}
         <div className="w-full flex items-center">
           <input

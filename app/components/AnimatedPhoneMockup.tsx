@@ -92,13 +92,13 @@ const AnimatedPhoneMockup = () => {
       <div className="flex gap-4">
         <button
           onClick={() => paginate(-1)}
-          className="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 rounded-lg hover:bg-slate-800 hover:text-white active:scale-95 transition-all text-xs font-mono tracking-wide"
+          className="px-4 py-2  rounded-lg text-sky-700 bg-sky-50 border border-sky-200 hover:bg-sky-100 transition-colors active:scale-[0.98] dark:text-white dark:bg-sky-500/10 dark:border-sky-500/30 dark:hover:bg-sky-500/20 active:scale-95 text-xs font-mono tracking-wide"
         >
           [НАЗАД]
         </button>
         <button
           onClick={() => paginate(1)}
-          className="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 rounded-lg hover:bg-slate-800 hover:text-white active:scale-95 transition-all text-xs font-mono tracking-wide"
+          className="px-4 py-2  rounded-lg text-sky-700 bg-sky-50 border border-sky-200 hover:bg-sky-100 transition-colors active:scale-[0.98] dark:text-white dark:bg-sky-500/10 dark:border-sky-500/30 dark:hover:bg-sky-500/20 active:scale-95 text-xs font-mono tracking-wide"
         >
           [ДАЛЕЕ]
         </button>
